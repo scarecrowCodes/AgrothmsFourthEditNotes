@@ -14,8 +14,13 @@ public class testAlg {
         StdIn inStream = new StdIn();
         inStream.input(a, a.length);
         //对a进行排序
+        //1、测试希尔排序
+        SortAlgAPI saa = new ShellSort();
+        saa.sort(a);
         //判断a是否已经有序
+        System.out.println(SortAlgAPI.isSorted(a));;
         //显示a中的元素
+        SortAlgAPI.display(a);
 
     }
 

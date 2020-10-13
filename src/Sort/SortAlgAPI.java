@@ -22,12 +22,12 @@ public interface SortAlgAPI {
     }
 
     //由于无法直接在接口中重写toString方法，改为使用display方法定义如何展示被排序的元素
-    static void show(Comparable[] a){
+    static void display(Comparable[] a){
 
         //在单行中打印元素，每打印五个换一行
         int cnt = 0;
         for(Comparable ele: a){
-            System.out.print(ele);
+            System.out.print(ele + "\t");
             if(++ cnt > 4){
                 System.out.println();
                 cnt = 0;

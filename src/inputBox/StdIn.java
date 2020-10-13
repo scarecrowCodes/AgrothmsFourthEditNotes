@@ -20,8 +20,8 @@ public class StdIn {
     public void input(Comparable[] a, int num){
 
         //判断所需输入量是否大于数组容量
-        if(num >= a.length){
-            throw new NullPointerException("所需输入量是否大于数组容量!");
+        if(num > a.length){
+            throw new NullPointerException("所需输入量大于数组容量!");
         }
 
         //从文件中提取数据
