@@ -57,7 +57,16 @@ public class MergeSort implements SortAlgAPI {
 
     }
 
+    //实现自底向上的归并排序
     public void sort(Comparable[] a) {
+
+        //自底向上的归并排序的核心思想就是在逻辑上将被排序的元素组看成是成单个，再1、1一组，2、2一组……2n、2n一组进行合并
+        int len = a.length;
+        for(int sz = 1; sz < len; sz = sz + sz){    //每次归并时归并的元素个数（1、1一组，2、2一组……2n、2n一组）
+            for(int lo = 0; lo < len - sz; lo += 2*sz){
+                merge(a, lo, lo + sz - 1, Math.min(lo + 2*sz - 1, len - 1));
+            }
+        }
 
     }
 

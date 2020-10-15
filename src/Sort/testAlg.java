@@ -25,6 +25,9 @@ public class testAlg {
         MergeSort saa = new MergeSort(a);
         saa.sort(a, 0, a.length - 1);
          */
+        //3、测试自底向上的归并排序
+        SortAlgAPI saa = new MergeSort(a);
+        saa.sort(a);
         //判断a是否已经有序
         System.out.println(SortAlgAPI.isSorted(a));;
         //显示a中的元素
